@@ -1,0 +1,12 @@
+from django.core.management.base import BaseCommand
+from recruitment_app.ml_utils import initialize_skill_matcher
+
+class Command(BaseCommand):
+    help = 'Initialize the machine learning skill matcher with dataset integration'
+    
+    def handle(self, *args, **options):
+        self.stdout.write('Initializing skill matcher with dataset...')
+        initialize_skill_matcher()
+        self.stdout.write(
+            self.style.SUCCESS('Successfully initialized skill matcher with dataset integration!')
+        )

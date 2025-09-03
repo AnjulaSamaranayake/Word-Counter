@@ -40,3 +40,13 @@ def main():
     
     # Count words
     word_count = count_words_in_file(filename)
+
+    # Display Result
+    if word_count is not None:
+        print(f"\n The '{filename}' has '{word_count}' words.")
+
+    else: 
+        print(f"Unable to count words because of some errors.")
+
+if __name__ == "__main__":
+    main()
